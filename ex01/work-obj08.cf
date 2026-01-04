@@ -1,0 +1,4 @@
+v 4
+file . "src/blinky.vhd" "5d8ff9e0b8a9819f451a4298b6461b8b37f9ffff" "20260104031103.863":
+  entity blinky at 1( 0) + 0 on 11;
+  architecture rtl of blinky at 12( 190) + 0 on 12;

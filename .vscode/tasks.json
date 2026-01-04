@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build FPGA",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Program FPGA",
+            "type": "shell",
+            "command": "make program",
+            "group": "build"
+        },
+        {
+            "label": "Run Simulation",
+            "type": "shell",
+            "command": "make sim",
+            "group": "test"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "make clean"
+        }
+    ]
+}
