@@ -1,22 +1,28 @@
 
 
-# Installing nextpnr for gowin
+# Installing tools
 
-### 1. Install apycula
+### 1. Install Gowin 
+Download from project p
 
-which gowin_pack # check if binaries are on the path
-python -m site --user-base # find the site packages base directory
-ls $HOME/.local/bin # confirm the binaries are installed in this folder
-export PATH="$HOME/.local/bin:$PATH" # add binaries to the path
+### 2. Install apycula
 
-### 2. Build nextpnr-himbaechel
+I had to create a virtual environment, and then install there apycula
+```bash
+pip install apycula
+```
+Check the install path for pass to nextpnr
 
+### 3. Build nextpnr (Place and Route)
+
+```bash
 mkdir -p build && cd build
 cmake .. -DARCH="himbaechel" -DHIMBAECHEL_UARCH="gowin" -D APYCULA_INSTALL_PREFIX=~/tmp/setup_apicula/
 make -j$(nproc)
 sudo make install
+```
 
-### 3. Make a test project
+### 4. Make a test project
 
 ```bash
 blinky/
